@@ -13,7 +13,7 @@ A unique, interactive portfolio website that mimics a command-line interface (CL
 
 ## Demo
 
-A live demo of the project is available [here](https://your-vercel-url.com).
+A live demo of the project is available [here](https://zephyr-portfolio.vercel.app).
 
 ## Commands
 
