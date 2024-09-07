@@ -46,4 +46,4 @@ To get started with the project locally, follow these steps:
 
    ```bash
    git clone https://github.com/NIKHIL-SHREY/portfolio.git
-   cd your-repo
+   cd portfolio
