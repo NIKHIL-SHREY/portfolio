@@ -45,5 +45,5 @@ To get started with the project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
+   git clone https://github.com/NIKHIL-SHREY/portfolio.git
    cd your-repo
