@@ -94,33 +94,47 @@ const Terminal = () => {
 
       switch (command) {
         case 'help':
-          result = `Welcome! Here are all available commands:\n\n` +
-                   `about - Who I am, interests, achievements\n` +
-                   `banner - ASCII art and image\n` +
-                   `github - Opens GitHub profile\n` +
-                   `resume - Downloads my resume\n` +
-                   `projects - Key projects\n` +
-                   `skills - Programming languages, blockchain, ML\n` +
-                   `contact - Contact info\n` +
-                   `email - Open email client\n` +
-                   `linkedin - Opens LinkedIn profile\n` +
-                   `instagram - Opens Instagram profile\n` +
-                   `cat - reads file\n` +
-                   `clear - Clears the terminal\n` +
-                   `sudo - sudo access\n` ;
+          result = `
+          **Welcome to Nikhil's Terminal!** Here's a list of all available commands:
+
+          **Commands**:
+          - about  banner  github  linkedin  twitter  instagram  projects
+          - skills  contact  resume  donate  cat  clear  sudo  mkdir  vim  vi
+          - nano  nvim  readme
+
+          **Major Commands**:
+          - **about**: Who I am, my interests, and achievements.
+          - **banner**: View my ASCII art and profile image.
+          - **projects**: Read about the exciting projects I've worked on.
+          - **skills**: Explore my technical skills, with links to relevant resources.
+          - **contact**: Get my contact information and copy it to the clipboard.
+          - **resume**: Download my resume.
+          - **sudo**: sudo access.
+          
+          Type the command you want to explore!`;
           break;
+
         case 'about':
-          result = `Hi! I’m a passionate developer.\n\n` +
-                   `CURRENT INTERESTS:\n` +
-                   `- Blockchain\n` +
-                   `- Machine Learning\n\n` +
-                   `ACHIEVEMENTS:\n` +
-                   `- Developed several decentralized applications\n` +
-                   `- Published research on ML techniques\n\n` +
-                   `CONNECT WITH ME:\n` +
-                   `- [GitHub](https://github.com/NIKHIL-SHREY)\n` +
-                   `- [LinkedIn](https://linkedin.com/in/nikhil-shrey)\n`;
+          result = `👨‍💻 **Who I am?**
+          I'm **Nikhil Kumar Shrey**, a dedicated developer with a knack for creating decentralized applications and tackling complex machine learning challenges.
+
+          **🚀 Current Interests**:
+          - Blockchain development, focusing on decentralization and transparency.
+          - Machine learning, particularly class-sensitive loss functions and reinforcement learning.
+
+          **🏆 Achievements**:
+          - Developed **OnChain Radio** on the Aptos Blockchain to revolutionize artist compensation.
+          - Conducted research on reinforcement learning to improve class imbalance in datasets.
+          - Built a secure, decentralized **voting system** for fair and transparent elections.
+
+          **🔗 Connect with me**:
+          - [GitHub](https://github.com/NIKHIL-SHREY) (click to open in new tab)
+          - [LinkedIn](https://linkedin.com/in/nikhil-shrey)
+          - [Instagram](https://instagram.com/nikhilshrey)
+
+          Always excited to collaborate and explore new innovations at the intersection of AI and blockchain.`;
           break;
+
         case 'github':
           result = 'Opening GitHub…';
           window.open('https://github.com/NIKHIL-SHREY', '_blank');
@@ -137,9 +151,17 @@ const Terminal = () => {
           result = 'Opening Instagram…';
           window.open('https://instagram.com/nikhilshrey', '_blank');
           break;
+
         case 'banner':
-          result = `${asciiArt}<img src="${profileImg}" alt="Profile" style="width:100px;height:100px;"/>`;
+          result = `
+          <div style="display: flex; align-items: center;">
+            <pre style="flex: 1;">${asciiArt}</pre>
+            <img src="${profileImg}" alt="Profile" 
+              style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover; image-rendering: pixelated; margin-left: 20px;" />
+          </div>
+          <br>Welcome to my terminal!`;
           break;
+
         case 'zephyr':
           result = `${asciiArt}\n\nABOUT :: [GitHub](https://github.com/NIKHIL-SHREY), [LinkedIn](https://linkedin.com/in/nikhil-shrey)\nCONTACT :: [Email](mailto:nikhil.shrey.2003@gmail.com), [Phone](tel:+919111900797)`;
           break;
@@ -152,12 +174,16 @@ const Terminal = () => {
           link.click();
           document.body.removeChild(link);
           break;
+
         case 'projects':
-          result = 'Key projects:\n' +
-                   '- ON CHAIN RADIO: A blockchain-based radio platform.\n' +
-                   '- CSL LOSS FUNCTION: A novel loss function for machine learning.\n' +
-                   '- BLOCKCHAIN VOTING: A decentralized voting system.\n';
+          result = `Here are a few projects I've worked on:
+
+          - **OnChain Radio**: A decentralized music streaming platform on the Aptos Blockchain that aims to revolutionize artist compensation and music copyright management.
+          - **CSL Loss Function**: A research project aimed at improving class-sensitive learning by addressing long-tailed datasets using reinforcement learning.
+          - **Blockchain Voting System**: Developed a decentralized voting platform that ensures secure, transparent, and tamper-proof elections.
+          `;
           break;
+
         case 'skills':
           result = 'Programming languages:\n' +
                    '- JavaScript\n' +
@@ -170,15 +196,18 @@ const Terminal = () => {
                    '- TensorFlow\n' +
                    '- PyTorch\n';
           break;
+
         case 'contact':
-          result = 'Contact Information:\n' +
-                   '- Email: [nikhil.shrey.2003@gmail.com](mailto:nikhil.shrey.2003@gmail.com)\n' +
-                   '- Phone: [+91 9111900797](tel:+919111900797)\n';
+          result = `**Contact Information**:
+          - **Email**: <span onclick="navigator.clipboard.writeText('nikhil.shrey.2003@gmail.com')">nikhil.shrey.2003@gmail.com</span> (Click to copy)
+          - **Phone**: <span onclick="navigator.clipboard.writeText('+91 9111900797')">+91 9111900797</span> (Click to copy)`;
           break;
+
         case 'email':
           result = 'Opening email client…';
           window.open('mailto:nikhil.shrey.2003@gmail.com', '_blank');
           break;
+
         case 'google':
           result = 'Opening Google…';
           window.open('https://www.google.com', '_blank');
@@ -188,35 +217,46 @@ const Terminal = () => {
                    `MetaMask Address: 0x15c10085818Da3ba29145080Fb6D4FB875cf904B\n\n` +
                    `Thank you for your support!`;
           break;
+
+        case 'sudo':
+          result = `Sorry, I can’t do that; you need to be root. But here's something for you:
+          <br><img src="https://media.giphy.com/media/VUwSH0Zcgx7Zm/giphy.gif" alt="Rickroll" style="width: 300px;" />
+          <br><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Click here if the video doesn’t open automatically</a>.`;
+          window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
+          break;
+
         case 'cd':
           result = `Changing directory to '${args}'... Just kidding, you are already here!`;
           break;
         case 'ls':
           result = `Listing directory contents for '${args}'... Just kidding, nothing to see here!`;
           break;
+
         case 'vim':
-          result = `vim is not recognized as an internal or external command, operable program or batch file.\n` +
-                   `If you are trying to edit '${args}', you might want to use a real editor.`;
+          result = `**vim** is too powerful for this terminal. Maybe try 'nano'.`;
           break;
-        case 'sudo':
-          result = `Sorry, I can’t do that; you need to be a root. But here's a Rickroll for you:`;
-          window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank');
+        case 'nano':
+          result = `**nano** is a bit complicated for this terminal. How about 'nvim'?`;
+          break;
+        case 'nvim':
+          result = `**nvim** might be a little too advanced. How about we stick to 'vim'?`;
           break;
         case 'vi':
-          result = `vi is not implemented.\n` +
-                   `If you are trying to open '${args}', you might want to use a real editor.`;
+          result = `**vi** is not recognized. Stick to 'vim' or 'nano'.`;
           break;
+
         case 'readme':
-          result = `README is not implemented.\n` +
-                   `If you need information about '${args}', please consult the documentation.`;
+          result = `No **README** file found. Just dive right into the commands!`;
           break;
         case 'mkdir':
-          result = `Making directory '${args}'... Just kidding, we don’t need directories here!`;
+          result = `**mkdir**: Creating directories is too old-school here. Everything's already in place!`;
           break;
+
         case 'cat':
           const catImageUrl = await fetchCatImage();
-          result = `<img src="${catImageUrl}" alt="Random Cat" style="width:200px;height:200px;"/>`;
+          result = `<img src="${catImageUrl}" alt="Random Cat" style="width: auto; height: auto;" />`;
           break;
+
         case 'clear':
           setCommands([{ input: 'zephyr:~$', currentInput: '', output: '', isProcessed: false }]);
           return;
