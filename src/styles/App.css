@@ -7,18 +7,27 @@ html, body {
 }
 
 #terminal {
-  padding: 20px; /* Add padding inside the terminal */
-  margin: 20px;  /* Add margin around the terminal */
-  border: 1px solid #333; /* Border for the terminal */
-  background-color: #000; /* Background color for the terminal */
-  color: #fff; /* Text color for the terminal */
-  font-family: monospace; /* Monospace font for terminal-like appearance */
-  height: calc(100vh - 40px); /* Adjust the height to account for padding/margin */
-  overflow-y: auto; /* Ensure that overflow is scrollable */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  border-radius: 4px; /* Optional: rounded corners for a softer border */
-  box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Optional: add a shadow to enhance border visibility */
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #333;
+    background-color: #000;
+    color: #fff;
+    font-family: monospace;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
+
+@media (max-width: 768px) {
+    #terminal {
+        margin: 10px; /* Reduce margin on smaller screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+        height: calc(100vh - 20px); /* Adjust height for smaller screens */
+    }
+}
+
 
 /* Customize scrollbar for Webkit browsers */
 #terminal::-webkit-scrollbar {
@@ -42,15 +51,16 @@ html, body {
   scrollbar-width: thin; /* Width of the scrollbar */
 }
 
-/* New CSS for ASCII art and image alignment */
 .ascii-image-container {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   align-items: center;
   margin-bottom: 10px;
 }
 
 .ascii-art {
   flex: 1;
+  margin-right: 10px;
   white-space: pre-wrap;
   overflow-wrap: break-word;
 }
@@ -60,13 +70,37 @@ html, body {
   width: 150px;
   height: 150px;
   object-fit: cover;
-  margin-left: 20px; /* Space between ASCII art and image */
 }
 
-/* Ensure the output display styles are applied correctly */
+@media (max-width: 768px) {
+  .ascii-image-container {
+      flex-direction: column; /* Stack vertically on smaller screens */
+      align-items: flex-start;
+  }
+
+  .ascii-art {
+      margin-right: 0; /* Remove margin on smaller screens */
+      margin-bottom: 10px; /* Add margin between elements when stacked */
+  }
+
+  .profile-image {
+      width: 120px; /* Adjust image size */
+      height: 120px;
+  }
+}
+
+
 .output-display {
   color: #00ff00;
   white-space: pre-wrap;
   margin-top: 8px;
   margin-bottom: 8px;
+  word-wrap: break-word; /* Ensure long lines break properly */
 }
+
+@media (max-width: 768px) {
+  .output-display {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+

@@ -1,8 +1,19 @@
 body {
     margin: 0; /* Adjust as needed */
-    padding: 0; /* Adjust as needed */ /* Green border color */
+    padding: 0; /* Adjust as needed */ 
     background-color: black;
     color: #00FF00;
     font-family: 'Courier New', monospace;
     font-size: 16px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+html {
+    font-size: 100%; /* Base font size, adjust as needed */
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 90%; /* Adjust base font size for smaller screens */
+    }
 }

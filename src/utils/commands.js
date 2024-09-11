@@ -54,25 +54,28 @@ export const processCommand = async (cmd, setCommands) => {
       break;
 
     case 'about':
-      result = `👨‍💻 **Who I am?**
-      I'm **Nikhil Kumar Shrey**, a dedicated developer with a knack for creating decentralized applications and tackling complex machine learning challenges.
-
-      **🚀 Current Interests**:
-      - Blockchain development, focusing on decentralization and transparency.
-      - Machine learning, particularly class-sensitive loss functions and reinforcement learning.
-
-      **🏆 Achievements**:
-      - Developed **OnChain Radio** on the Aptos Blockchain to revolutionize artist compensation.
-      - Conducted research on reinforcement learning to improve class imbalance in datasets.
-      - Built a secure, decentralized **voting system** for fair and transparent elections.
-
-      **🔗 Connect with me**:
-      - [GitHub](https://github.com/NIKHIL-SHREY) (click to open in new tab)
-      - [LinkedIn](https://linkedin.com/in/nikhil-shrey)
-      - [Instagram](https://instagram.com/nikhilshrey)
-
-      Always excited to collaborate and explore new innovations at the intersection of AI and blockchain.`;
+      result = `
+        👨‍💻 <strong>Who I am?</strong><br>
+        I'm <strong>Nikhil Kumar Shrey</strong>, a dedicated developer with a knack for creating decentralized applications and tackling complex machine learning challenges.
+    
+        <strong>🚀 Current Interests:</strong>
+        - Blockchain development, focusing on decentralization and transparency.
+        - Machine learning, particularly class-sensitive loss functions and reinforcement learning.
+    
+        <strong>🏆 Achievements:</strong>
+        - Developed <strong>OnChain Radio</strong> on the Aptos Blockchain to revolutionize artist compensation.
+        - Conducted research on reinforcement learning to improve class imbalance in datasets.
+        - Built a secure, decentralized <strong>voting system</strong> for fair and transparent elections.
+    
+        <strong>🔗 Connect with me:</strong>
+        - <a href="https://github.com/NIKHIL-SHREY" target="_blank">GitHub</a>
+        - <a href="https://linkedin.com/in/nikhil-shrey" target="_blank">LinkedIn</a>
+        - <a href="https://instagram.com/nikhilshrey" target="_blank">Instagram</a>
+    
+        Always excited to collaborate and explore new innovations at the intersection of AI and blockchain.
+      `;
       break;
+    
 
     case 'github':
       result = 'Opening GitHub…';
@@ -180,6 +183,38 @@ export const processCommand = async (cmd, setCommands) => {
 
     case 'cd':
       result = `Changing directory to '${args}'... Just kidding, you are already here!`;
+      break;
+
+    case 'mkdir':
+      result = `Creating directory '${args}'... Unfortunately we dont have disk-space!`;
+      break;
+
+    case 'vim':
+      result = `Opening Vim... Actually, it looks like you’d be better off with 'vi'.`; 
+      break;
+
+    case 'vi':
+      result = `Opening Vi... But have you tried 'nvim'? It's like Vi, but cooler.`;
+      break;
+    
+    case 'nano':
+      result = `Opening Nano... Have you considered 'nvim'? It's the next step up!`;
+      break;
+    
+    case 'nvim':
+      result = `Opening Neovim... Wait, did you mean 'vim'? It's just as powerful, promise!`;
+      break;
+    
+    case 'readme':
+      result = `Opening README.md... Just kidding, there's no documentation here!`;
+      break;
+
+    case 'ls':
+      result = `Listing files in the current directory... Actually, there’s nothing here to list!`;
+      break;
+
+    case 'pwd':
+      result = `Showing current directory... But since we're in a virtual terminal, it’s a mystery!`;
       break;
 
     case 'cat':
