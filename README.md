@@ -1,4 +1,4 @@
-# Terminal Portfolio Website
+# MY Portfolio Website (IN PROGRESS)
 
 A unique, interactive portfolio website that mimics a command-line interface (CLI) terminal. Users can type commands such as `about`, `projects`, `skills`, and `contact` to explore information about me and my work. This project is built with React and designed to provide an engaging developer experience.
 
