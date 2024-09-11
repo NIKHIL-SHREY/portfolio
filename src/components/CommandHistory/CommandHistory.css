@@ -1,0 +1,14 @@
+.command-block {
+  margin-bottom: 20px;
+}
+
+.prompt {
+  margin-right: 10px;
+  color: #00ff00;
+}
+
+.typed-command {
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}

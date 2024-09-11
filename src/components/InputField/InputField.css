@@ -1,0 +1,22 @@
+.input-line {
+  display: flex;
+  align-items: center;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.prompt {
+  margin-right: 8px;
+  color: #00ff00; /* You can adjust the color to fit your theme */
+}
+
+.input-field {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  font-family: monospace;
+  font-size: 14px;
+  caret-color: #00ff00; /* Cursor color */
+}
