@@ -1,4 +1,4 @@
-# MY Portfolio Website (IN PROGRESS)
+# My Portfolio Website (IN PROGRESS)
 
 A unique, interactive portfolio website that mimics a command-line interface (CLI) terminal. Users can type commands such as `about`, `projects`, `skills`, and `contact` to explore information about me and my work. This project is built with React and designed to provide an engaging developer experience.
 
@@ -7,7 +7,6 @@ NOT RESPONSIVE YET(:work in progress)
 ## Features
 
 - **Command-line interface**: Type commands to interact with the portfolio.
-- **Auto-typing effect**: Simulates typing output like a real terminal.
 - **Command history**: Use the arrow keys to navigate through previous commands.
 - **Custom commands**: Commands like `about`, `projects`, `skills`, and `contact` provide detailed information.
 - **ASCII Art Banner**: Displays an ASCII art banner on launch and when using the `banner` command.
@@ -29,10 +28,10 @@ The following commands are available on the terminal:
 - `github` – Opens GitHub profile.
 - `linkedin` – Opens LinkedIn profile.
 - `resume` – Downloads the resume.
-- `cat` – Displays a random cat image.
+- `cat` – cat files.
 - `clear` – Clears the terminal.
 - `banner` – Displays the ASCII art banner.
-- `sudo` – Hidden fun command!
+- `sudo` – sudo access!?
 
 ## Tech Stack
 
